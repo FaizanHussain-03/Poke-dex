@@ -1,25 +1,8 @@
-# Pokédex App
+# React + Vite
 
-A simple and interactive Pokédex application that allows users to search for Pokémon, view details like type, abilities, and stats, and learn more about their favorite Pokémon. Built with modern web technologies to deliver a seamless user experience.
+This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
 
----
+Currently, two official plugins are available:
 
-## Features
-- **Search Functionality:** Search Pokémon by name or ID.
-- **Detailed Information:** View Pokémon stats, height, weight and types.
-- **Responsive Design:** Works on both mobile and desktop devices.
-
-- ## Technologies Used
-- **Programming Language:** JavaScript
-- **Framework/Library:** React
-- **API:** [PokéAPI](https://pokeapi.co/api/v2/pokemon)
-- **Styling:** CSS/Styled Components
-
----
-
-## Contributing
-We welcome contributions to improve this app! To contribute:
-1. Fork the repository.
-2. Create a new branch for your feature or bug fix.
-3. Commit your changes with clear messages.
-4. Push to your fork and submit a pull request.
+- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
+- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
