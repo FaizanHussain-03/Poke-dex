@@ -50,7 +50,7 @@ function PokemonList() {
   }
   useEffect(() => {
     downloadPokemons();
-  }, []);
+  }, [pokemonListState.pokedexUrl]);
 
   return (
     <div className="pokemon-list-wrapper">
@@ -58,9 +58,33 @@ function PokemonList() {
         <div>Loading...</div>
       ) : (
         pokemonListState.pokemonList.map((p) => (
-          <Pokemon key={p.id} name={p.name} image={p.image} id={p.id}/>
+          <Pokemon key={p.id} name={p.name} image={p.image} id={p.id} />
         ))
       )}
+      <div className="buttons">
+        <button
+          disabled={pokemonListState.prevUrl === null}
+          onClick={() =>
+            setPokemonListState({
+              ...pokemonListState,
+              pokedexUrl: pokemonListState.prevUrl,
+            })
+          }
+        >
+          Prev
+        </button>
+        <button
+          disabled={pokemonListState.nextUrl === null}
+          onClick={() =>
+            setPokemonListState({
+              ...pokemonListState,
+              pokedexUrl: pokemonListState.nextUrl,
+            })
+          }
+        >
+          Next
+        </button>
+      </div>
     </div>
   );
 }
